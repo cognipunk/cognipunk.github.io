@@ -1,0 +1,24 @@
+/* Font Faces */
+@font-face {
+    font-family: "Inconsolata";
+    src: url("../fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("TrueType");
+}
+
+$base-font-family: 'Inconsolata';
+
+/* Overrides */
+
+/* Red
+$brand-color: #890000;
+$link-base-color: #cf0000;
+$link-visited-color: #cd0000;
+$link-hover-color: #a00000;
+$background-color: #1e1e1e;
+*/
+
+/* Greyscale */
+$brand-color: #d4d4d4;
+$link-base-color: #c0c0c0;
+$link-visited-color: #a8a8a8;
+$link-hover-color: #ffffff;
+$background-color: #1e1e1e;

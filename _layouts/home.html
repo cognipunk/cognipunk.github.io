@@ -1,0 +1,159 @@
+---
+layout: base
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  <div class="home-card">
+    <div class="home-card-info">
+        <div class="home-card-title">
+            <h1>{{ site.title }}</h1>
+        </div>
+        <div class="link-list">
+            <a href="/resources/">Resources</a>
+            ·
+            <a href="/mirrors/">Mirrors</a>
+            ·
+            <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" target="_blank">RSS</a>
+        </div>
+    </div>
+    <div class="ascii-container">
+        <span>
+                                                                                                    
+                                                    .+&&XX&&&&X:                                    
+                                               ;&&&&&&&&&&&&&&&&&&&&X:                              
+                                             +&&&&&&&&&&&&&&&&&&&&&&&&&+                            
+                                           ;&&&&&$;:;+;:;x+;+;;;:.;&&&&&&X                          
+                                          $&&&&;::;++;+;Xx:+X:;+++$&&;&&&&:                         
+                                         ;&&&++XX$X;.:;++.;+;+X$$&&Xx+;;&&&&X                       
+                                         &&&.:;:xX+++&&&&&&&&&&&&$x+x;X;$&&&&;                      
+                                       .&&&X:+;;+.+&&&&&$$&&&&&&&$+x$&&$+;+&&+                      
+                                       :&&&+&&&&&$X:+&&&&&&&&&&&&;+&&&&X:;$&&X                      
+                                       &&&+$X;::.;$&&&&&$$&&&&&&&&&+xX&&&&XX&&.                     
+                                       &&$&X.+++&&&&;..:::.::;:;x&&&&x;x++;;&&:                     
+                                       &&&x+;XX+$X;:+$&&&X+;+$&&&+;&&&;:;x++&&:                     
+                                       ;&&;+;+&&$:xX+X$&&&X&&&&&+:XX+Xx++;;&&X                      
+                                        &&&;&&&$;;;:.+xX&&$&&XX&xX&$+;$X:;$&&:                      
+                                        :&&&x+X+:x$x:;;&&&&&&&&+$&;Xx;;;++&&;                       
+                                         +&&&&&+::+xXX$&X;;&&&$x$&&&$;;xx$&+                        
+                                          +&&&&+;xx:;x;;+;;&&:++&$;+X;;$&&X.                        
+                                           ;&&$;;;;;:..::X&&&X&X:x&&X:;&&x:                         
+                                            &&&X::;;::.:$&&&&$&$+XX;::X&&                           
+                                            +&&$+;;:;$&&&&&;;$&&&X;:..&&+                           
+                                             &&$.:+++XX;X&&&&X:$$++x+X&&.                           
+                                             &&&+:;+x$&&&&&&&&&&x:+;x&&x                            
+                                         .:$&&&$;X+.:+++X&&x:x&&X++X&&x.                            
+                                      :&&&&&&&&&Xx&&&X+;+$XXx+++++$&&x.                             
+                                     X&&&&&&&&$x&X;;::;:$&X$;+&&&X&&+.                              
+                                    +&&&+X;$&&x;&&&+.X:+$&+&+x&++:&&+:                              
+                                ;&&&&&&x&;&&+;:::;+$;+&&X$X&+$&;+:$&&&X;                            
+                         ;&&&&&&&&&&&&X&X&XX::::::;Xxx&&&XX&&&x ;;+:$&&&X:                          
+                       X&&&&&&&&&&&&$x+&X$++..:;:::;+&&$:.:++;:::+x+:+x&&&&;                        
+                    :&&&&&&Xxx$XX$X$$x;Xx:$x...:;::::+&&$+:..::;:+$;$:+:+&&&&&&+                    
+                 .X&&&&&:$$$&&+:Xx;:X$&&&$$$;. :;;;;;;X&&$+: :;;:+&;$xX+&$x&&&&&;                   
+                +&&&&&::&&&&&&&&&XX$$x&&x&&X;:.:;;++++xX$&$$x+;::$&.&$XX:&$:;;&&&.                  
+                &&&x;;X&&&&&&&;;+;;.:x&&&&x++;:.::::;+xX&&&&&&$+;$X&&&&+++&++++&&+                  
+                &&+;:$&&+ .+$X;;;+::;+:$$:x&X.:::;:::;++xX$&&&&&&&&&&&&+$+&X++;&&&.                 
+                &&&:x$X;:X&&++X$X+::::;::;x;&&X::::;:::;++;:;X:+&&&&X&$&&&&&++:;&&x.                
+                &&&X&X;:$&&+&X.::;$X+.;::.+$+$&&x+Xx: :+;.;:;+++X$&X&&;&&&&&;x;:&&&;                
+               +&&&&x:+&&$$&+++;x&$;x:;;.:.;$&:&&X;x$X:;+;:::;x;+XX$&x&&&&X&;XX;;&&&                
+              ;&&&&+:;&&:&&;;+X&&$;x;;:+:..:;$&&:&&;;$$++$&&&&&&XX;&x$&x&&+&xX&+;x&&                
+              &&&&x::&&;&$;:;X&$:X+;+;:+;..:;;+&&XX&$;+$&X ;;;;;XXX$X&$X&&+&&X&+;:&&:               
+             .&&&X+:&&;&X;.;$&Xx&;+$$X:;;::;;.::$&&:&&X;:+;:+$&&&;X+X+;&&&;&&+&X::&&+               
+             :&&&+xx&&$&X;;&&x&X;X&&$$;;:x&&X;..:x&&&;&&$;:+;;Xx;X+;.:;&&&X&&x&+;:$&$               
+             $&&.+$&&+&&+;&&:&Xx&X$;&X;+.$&&&X;.::+$&&$x&&&X++.x&&$XX&&&&&$&&X&:++$&&               
+            :&&&x;&&;&&X $&:&+&&X;+X&;+x:$&:&&$;.::+X&&&$X&&&&&&&&&&&&&&&+X&&X&XxX&&$               
+            :&&++$&+&&&;:&$$;&&;;x:&x;$;:+$&;$&&;::.;X&&&&XX&&&&&&&&&x;X..X$&+&$+$&&x               
+            :&&&&&XX&&+X$&:X&&:$++&&;XX.;xX;XxX&&;:;x:;X&&&&$x+++++++.xx+;$+&XX&+&&&;               
+            :&&&&Xx&&+;+&&$$&:$+&x&XXX::+&&&+XX+&&$X&&$.x&&&&$+++;+;:;++$x&:&&.$;&&&.               
+             +&&&+&&x;;+&&&$;+$&+&&$X:.:+&&X&;X$:&&&&&&&;+$&&&+:;;;: ;x$x$$+X&x&X&&&                
+              +&&&&&&&&&&;x&$$&:&&$;.:::;X&&.&&&&&&&x;&&&+:;$&&X+;.:;::;:$xx+X;&&&&&                
+               :&&&&&&&&.$&&$&+&&&;;::::::::$&xXXx;xX+++&&X +$&X;:.:::;;+;;x+$$xxX&$                
+                 .+&&&&&$&&&&&x&&+x++;:.::::$&&&&&$;$X+X:&&&X:$&$;.;:.:;;Xx&$&x&x:&x                
+                     .;$&&&&&:&&x+XXxX$&&&x;:;+++X$X:&$;x:&&&&&$xX.++::;;.&$&&:&X+&+                
+                         :+$X&&&::;+xX&&&&$X++;++;;;;:$$;+;$&&&&&x::.::;++&x&&:&&&$;                
+                           :X&&$;;;:+x+::+X$$Xx++;;;;;.xX+x;X;;;;X+.: ::;:&+&&;&&+:.                
+                            ;&&&&:;x+;;;: :;;+;;;::::;+::;;;:++:XX:;;:::+X&;&$;&&+                  
+                             :&&&&&X:X&&$$$XXX+++++++++x+:.;;;Xx::;::.:::;X+&$&&&;                  
+                               ;&&&&&&&&+.;xXX$$$$$Xx++xX+:.;::;+;:..:;x&&&x$&&&+                   
+                                 :X&&&&&&&&&&&&&$; :;;;;+X+::::;::.:;+X$&&&&&&X;                    
+                                     .;$&&&&&&&&&&&&&&&&$X+;;:;;+XXX$&&&&&&x.                       
+                                         ;&X. .:;X$&&&x:.:;;;;...:;$&$Xx;:                          
+                                      .+&&&+;:::...x&&&&&&&&&&&&&&&&$:                              
+                                      +&&&;::::;X$&&&&&&&&&&&&&&&&&&&$.                             
+                                      $&+.:;+X&&&&&&$XXXXX+;;::;x$&&&$:                             
+                                      X&&&x:::;++X&&&&&&&&&&&&&&&&&&&x.                             
+                                      :X&&&$X&&&&&&&&&&&&&&&&&$+x&$;.                               
+                                         +&$x+;;;;;:::::;;;+xXX$&&X                                 
+                                        ;&&&&&&&&&&&&&&&&&&&$X+;x&&x.                               
+                                    :$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$:                            
+                                   .&&&&&&&&&&&&&$$XX$$$$$&&&&&&&&&&&&&&.                           
+                                   .&&&x;;;;;::::.  ..::;;;;;++xXXx+x$&&.                           
+                                   .&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&.                           
+                                    $&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$;                            
+                                      .:+$&&&&&&&&&&&&&&&&&&$X++;:.                                 
+        </span>
+    </div>
+  </div>
+
+
+  {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: date_format }} | {% include reading-time.html post_content=post.content %}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.minima.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Go to Page {{ paginator.previous_page }}">
+              {{ paginator.previous_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Go to Page {{ paginator.next_page }}">
+              {{ paginator.next_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+  {%- endif -%}
+</div>

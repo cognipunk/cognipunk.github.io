@@ -1,0 +1,139 @@
+/* Overrides */
+.footer-description {
+    text-align: center;
+    
+}
+
+.site-header {
+    border-top: none;
+}
+
+.site-footer {
+    padding-bottom: 0;
+}
+
+.footer-description p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.social-media-list li a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $brand-color;
+    padding: 0;
+    border: none;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+.post-list li p {
+    color: darken($brand-color, 30%);
+}
+
+.post-meta {
+    color: darken($brand-color, 20%);
+}
+
+@media (min-width: 767px) {
+    .post-meta {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
+
+.post-title {
+    letter-spacing: 1px;
+}
+
+/* Custom Styles */
+
+.home-card {
+    height: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: horizontal;
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid $border-color-01;
+    padding: $spacing-unit * .5;
+}
+
+.home-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-card-title h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    text-wrap: nowrap;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #dddddd;
+    letter-spacing: 2px;
+}
+
+.header-home {
+    position: absolute;
+    margin: 10px 0 0px 10px;
+    font-size: 1.2rem;
+}
+
+.ascii-container {
+    font-size: 5px;
+    line-height: 1;
+    white-space: pre;
+    letter-spacing: 1px;
+    text-align: right;
+    color: $brand-color;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-list a {
+    font-weight: 350;
+    text-transform: uppercase;
+    color: darken($brand-color, 10%);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .home-card {
+        flex-direction: column;
+    }
+
+    .ascii-container {
+        text-align: center;
+    }
+
+    .home-card-title h1 {
+        font-size: 1.25rem;
+    }
+
+    .link-list a {
+        font-weight: 350;
+        text-transform: uppercase;
+        color: darken($brand-color, 10%);
+        font-size: 16px;
+    }
+
+    .header-home {
+        font-size: 1rem;
+    }
+}
